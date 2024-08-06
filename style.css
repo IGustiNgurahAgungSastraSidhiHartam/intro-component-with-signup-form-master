@@ -39,6 +39,7 @@ body .container {
   padding: 1em;
 }
 body .container .headder .headder-section {
+  line-height: 1.4em;
   font-family: var(--font-family);
   font-weight: var(--font-weight-bold);
   font-size: 1.7em;
@@ -55,7 +56,7 @@ body .container .headder .headder-content {
   margin-bottom: 2.5em;
 }
 body .container .body-section .body-discon {
-  padding: 1em;
+  padding: 1em 3em;
   background-color: var(--accent-blue);
   color: white;
   font-family: "Poppins", sans-serif;
