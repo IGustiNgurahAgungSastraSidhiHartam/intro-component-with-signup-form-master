@@ -28,7 +28,6 @@ function validate() {
     icon.classList.add("show-pass2");
   } else if (symbol.test(firstNameInput.value)) {
     imageEror.classList.remove("d-none");
-    imageEror.classList.add("d-none");
     msgFirstName.innerHTML = "first name only a character";
     imageEror.classList.add("show-pass2");
     imageEror.classList.remove("show-pass");
