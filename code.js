@@ -14,18 +14,24 @@ const imageEroremail = document.querySelector("#image-email");
 const imageErorpass = document.querySelector("#image-password");
 const tampilPass = document.querySelector("#checkbox");
 const icon = document.querySelector(".icon");
-
+const symbol = /[!@#$%^&*()_+';<>/';.,1234567890]/;
 function validate() {
   if (firstNameInput.value.trim() === "") {
     imageEror.classList.remove("d-none");
     msgFirstName.innerHTML = "first name cannot be empty";
     icon.classList.remove("show-pass");
     icon.classList.add("show-pass2");
-  } else if (firstNameInput.value.length < 3) {
+  } else if (firstNameInput.value.length <= 3) {
     imageEror.classList.remove("d-none");
-    msgFirstName.innerHTML = "first name must be at least 2 characters";
+    msgFirstName.innerHTML = "first name must be at least 3 characters";
     icon.classList.remove("show-pass");
     icon.classList.add("show-pass2");
+  } else if (symbol.test(firstNameInput.value)) {
+    imageEror.classList.remove("d-none");
+    imageEror.classList.add("d-none");
+    msgFirstName.innerHTML = "first name only a character";
+    imageEror.classList.add("show-pass2");
+    imageEror.classList.remove("show-pass");
   } else {
     imageEror.classList.add("d-none");
     msgFirstName.innerHTML = "";
@@ -41,6 +47,11 @@ function validate() {
   } else if (lastNameInput.value.length < 3) {
     imageErorLast.classList.remove("d-none");
     msgLastName.innerHTML = "last name must be at least 2 characters";
+    icon.classList.remove("show-pass");
+    icon.classList.add("show-pass2");
+  } else if (symbol.test(lastNameInput.value)) {
+    imageErorLast.classList.remove("d-none");
+    msgLastName.innerHTML = "last name only a character";
     icon.classList.remove("show-pass");
     icon.classList.add("show-pass2");
   } else {
