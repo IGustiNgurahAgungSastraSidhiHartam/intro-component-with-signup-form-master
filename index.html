@@ -45,27 +45,65 @@
           then $20/mo. thereafter
         </div>
         <div class="body-content">
-          <ul>
-            <li class="first">
-              <input type="text" placeholder="First Name" />
-            </li>
-            <li class="last">
-              <input type="text" placeholder="Last Name" />
-            </li>
-            <li class="email">
-              <input type="text" placeholder="Email Address" />
-            </li>
-            <li class="password">
-              <input type="password" placeholder="Password" />
-            </li>
-            <li class="claim">
-              <input type="submit" value="CLAIM YOUR FREE TRIAL" />
-            </li>
-            <span class="disclaimer"
-              >By clicking the button, you are agreeing to our</span
-            >
-            <span class="terms">Terms and Services</span>
-          </ul>
+          <form action="" id="sign-up-form">
+            <ul>
+              <li class="first">
+                <input type="text" name="first-name" placeholder="First Name" />
+                <span class="" id="first"></span
+                ><img
+                  src="images/icon-error.svg"
+                  alt=""
+                  class="image-first d-none"
+                  id="image-first"
+                />
+              </li>
+              <li class="last">
+                <input type="text" name="last-name" placeholder="Last Name" />
+                <span class="" id="last"></span>
+                <img
+                  src="images/icon-error.svg"
+                  alt=""
+                  class="image-last d-none"
+                  id="image-last"
+                />
+              </li>
+              <li class="email">
+                <input type="text" name="email" placeholder="Email Adress" />
+                <span class="" id="email"></span
+                ><img
+                  src="images/icon-error.svg"
+                  alt=""
+                  class="image-email d-none"
+                  id="image-email"
+                />
+              </li>
+              <li class="password">
+                <input type="password" name="password" placeholder="Password" />
+                <span class="" id="password"></span
+                ><img
+                  src="images/icon-error.svg"
+                  alt=""
+                  class="image-password d-none"
+                  id="image-password"
+                />
+              </li>
+              <li class="claim">
+                <button class="btn" type="submit">CLAIM YOUR FREE TRIAL</button>
+              </li>
+            </ul>
+            <img
+              id="show-pass"
+              src="https://www.svgrepo.com/show/532493/eye.svg"
+              alt=""
+              onclick="showPass()"
+              class="icon show-pass"
+            />
+            <!-- <input type="checkbox" id="checkbox" class="pass" /> -->
+          </form>
+          <span class="disclaimer"
+            >By clicking the button, you are agreeing to our</span
+          >
+          <span class="terms">Terms and Services</span>
         </div>
       </div>
     </div>
@@ -78,5 +116,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
     </footer>
+    <script src="./code.js" defer></script>
   </body>
 </html>

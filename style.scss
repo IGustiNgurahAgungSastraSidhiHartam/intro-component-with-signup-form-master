@@ -28,6 +28,10 @@
   box-sizing: border-box;
 }
 
+.d-none {
+  display: none;
+}
+
 body {
   background-image: url("images/bg-intro-mobile.png");
   background-color: var(--primary-red);
@@ -43,7 +47,6 @@ body {
 
     .headder {
       .headder-section {
-        line-height: 1.4em;
         font-family: var(--font-family);
         font-weight: var(--font-weight-bold);
         font-size: 1.7em;
@@ -83,50 +86,85 @@ body {
         border-radius: 0.5em;
         width: 95%;
         margin-left: 0.5em;
-        ul {
-          list-style: none;
-          .first {
+        form {
+          position: relative;
+          text-align: right;
+          font-family: var(--font-family);
+          font-weight: var(--font-weight-regular);
+          font-size: var(--body-font-size);
+          color: var(--primary-red);
+          font-size: small;
+          img {
+            position: relative;
+            top: -50px;
+            right: 14px;
+          }
+          ul {
+            position: relative;
+            list-style: none;
+            .first {
+              margin: 0;
+              padding: 0;
+              input {
+                border-radius: 0.4em;
+                width: 100%;
+                padding: 1.5em;
+                margin-bottom: 0.5em;
+                border: 1px solid var(--neutral-grayish-blue);
+                font-weight: var(--font-weight-bold);
+              }
+              #first {
+                position: relative;
+                top: -1.1em;
+                left: 20px;
+              }
+            }
+            .last {
+              input {
+                border-radius: 0.4em;
+                padding: 1.5em;
+                margin-bottom: 0.5em;
+                width: 100%;
+                border: 1px solid var(--neutral-grayish-blue);
+                font-weight: var(--font-weight-bold);
+              }
+              #last {
+                position: relative;
+                top: -1.1em;
+                left: 20px;
+              }
+            }
+            .email {
+              input {
+                border-radius: 0.4em;
+                padding: 1.5em;
+                margin-bottom: 0.5em;
+                width: 100%;
+                border: 1px solid var(--neutral-grayish-blue);
+                font-weight: var(--font-weight-bold);
+              }
+              #email {
+                position: relative;
+                top: -1.1em;
+                left: 20px;
+              }
+            }
             input {
               border-radius: 0.4em;
-              width: 100%;
               padding: 1.5em;
-              margin-bottom: 1em;
+              margin-bottom: 0.5em;
+              width: 100%;
               border: 1px solid var(--neutral-grayish-blue);
               font-weight: var(--font-weight-bold);
             }
-          }
-          .last {
-            input {
-              border-radius: 0.4em;
-              padding: 1.5em;
-              margin-bottom: 1em;
-              width: 100%;
-              border: 1px solid var(--neutral-grayish-blue);
-              font-weight: var(--font-weight-bold);
-            }
-          }
-          .email {
-            input {
-              border-radius: 0.4em;
-              padding: 1.5em;
-              margin-bottom: 1em;
-              width: 100%;
-              border: 1px solid var(--neutral-grayish-blue);
-              font-weight: var(--font-weight-bold);
-            }
-          }
-          .password {
-            input {
-              border-radius: 0.4em;
-              padding: 1.5em;
-              margin-bottom: 1em;
-              width: 100%;
-              border: 1px solid var(--neutral-grayish-blue);
-              font-weight: var(--font-weight-bold);
+            #password {
+              position: relative;
+              top: -1.1em;
+              left: 20px;
             }
           }
           .claim {
-            input {
+            button {
               border-radius: 0.4em;
               padding: 1.5em;
               margin-bottom: 1em;
@@ -137,27 +175,69 @@ body {
               font-weight: var(--font-weight-bold);
             }
           }
-          .disclaimer {
-            font-size: 0.8em;
-            color: var(--neutral-grayish-blue);
-            font-family: "Poppins", sans-serif;
-          }
-          .terms {
-            color: var(--primary-red);
-            font-family: "Poppins", sans-serif;
-            font-size: 0.8em;
-          }
         }
+        .show-pass {
+          transform: translateY(-4.1rem) translateX(-2rem);
+
+          width: 25px;
+          height: 25px;
+        }
+
+        .show-pass2 {
+          transform: translateY(-6.1rem) translateX(-2rem);
+
+          width: 25px;
+          height: 25px;
+        }
+        /* .pass {
+          display: flex;
+          width: 1rem;
+          transform: translateY(-7rem) translateX(16rem);
+        } */
+      }
+      .disclaimer {
+        font-size: 0.8em;
+        color: var(--neutral-grayish-blue);
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        width: 100%;
+      }
+      .terms {
+        color: var(--primary-red);
+        font-family: "Poppins", sans-serif;
+        font-size: 0.8em;
+        text-align: center;
+        width: 100%;
       }
     }
   }
 }
 
-/* Layout Responsif */
-@media (max-width: 375px) {
-  /* Gaya untuk perangkat seluler */
-}
+@media screen and (min-width: 475px) {
+  body {
+    transition: all 0.5s;
 
-@media (min-width: 1440px) {
-  /* Gaya untuk perangkat desktop */
+    .container {
+      padding: 2em;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .headder {
+        .headder-section {
+          line-height: 1.4em;
+          text-align: justify;
+          font-weight: 900;
+          font-size: 2.5em;
+          width: 10em;
+        }
+        .headder-content {
+          width: 30em;
+          font-size: 1em;
+          text-align: justify;
+          padding: 1em;
+        }
+      }
+    }
+  }
 }
