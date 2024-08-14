@@ -37,7 +37,7 @@ body {
   background-color: var(--primary-red);
   max-width: 100vw;
   min-height: 100vh;
-  //padding: 1em;
+  padding: 1em;
   align-items: center;
   //object-fit: cover;
   //overflow: hidden;
@@ -93,7 +93,7 @@ body {
         width: 95%;
         margin-left: 0.5em;
         form {
-          position: relative;
+          position: flex;
           text-align: right;
           font-family: var(--font-family);
           font-weight: var(--font-weight-regular);
@@ -182,24 +182,11 @@ body {
             }
           }
         }
-        .show-pass {
-          transform: translateY(-4.1rem) translateX(-2rem);
-
-          width: 25px;
-          height: 25px;
-        }
-
-        .show-pass2 {
-          transform: translateY(-6.1rem) translateX(-2rem);
-
-          width: 25px;
-          height: 25px;
-        }
         /* .pass {
           display: flex;
           width: 1rem;
           transform: translateY(-7rem) translateX(16rem);
-        } */
+          } */
       }
       .disclaimer {
         font-size: 0.8em;
@@ -216,33 +203,204 @@ body {
         width: 100%;
       }
     }
+    .show-pass {
+      transform: translateY(-11.4rem) translateX(6em);
+
+      width: 25px;
+      height: 25px;
+    }
+
+    .show-pass2 {
+      transform: translateY(-13.3rem) translateX(4em);
+
+      width: 25px;
+      height: 25px;
+    }
   }
 }
 
 @media screen and (min-width: 475px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
   body {
+    min-height: 100vh;
     transition: all 0.5s;
-    padding: 2.3em 0 0 0;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
     .container {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      text-align: center;
+
       .headder {
+        padding: 0%;
+        margin: 0%;
         .headder-section {
           line-height: 1.4em;
           text-align: justify;
           font-weight: 900;
-          font-size: 2.7em;
+          font-size: 2.6em;
           width: 10em;
         }
         .headder-content {
           width: 35em;
-          font-size: 1em;
+          font-size: 0.9em;
           text-align: justify;
-          padding: 1em;
-          margin-right: 5em;
+          margin-right: 4em;
+        }
+      }
+
+      .body-section {
+        margin-top: 2.5em;
+        .body-discon {
+          margin-top: 2em;
+          padding: 1em 3em;
+          background-color: var(--accent-blue);
+          color: white;
+          font-family: "Poppins", sans-serif;
+          border-radius: 0.5em;
+          text-align: center;
+          width: 100%;
+          margin-left: 0.5em;
+          font-size: 0.9em;
+          box-shadow: 0px 5px 0px 0 rgba(77, 77, 77, 0.509);
+          margin-bottom: 1em;
+
+          span {
+            font-weight: var(--font-weight-bold);
+          }
+        }
+        .body-content {
+          background-color: white;
+          padding: 1.5em;
+          border-radius: 0.5em;
+          width: 100%;
+          margin-left: 0.5em;
+          form {
+            position: flex;
+            text-align: right;
+            font-family: var(--font-family);
+            font-weight: var(--font-weight-regular);
+            font-size: var(--body-font-size);
+            color: var(--primary-red);
+            font-size: small;
+            img {
+              position: relative;
+              top: -45px;
+              right: 14px;
+            }
+            ul {
+              position: relative;
+              list-style: none;
+              .first {
+                margin: 0;
+                padding: 0;
+                input {
+                  border-radius: 0.4em;
+                  width: 100%;
+                  padding: 1.1em;
+                  margin-bottom: 0.5em;
+                  border: 1px solid var(--neutral-grayish-blue);
+                  font-weight: var(--font-weight-bold);
+                }
+                #first {
+                  position: relative;
+                  top: -1.1em;
+                  left: 20px;
+                }
+              }
+              .last {
+                input {
+                  border-radius: 0.4em;
+                  padding: 1.2em;
+                  margin-bottom: 0.5em;
+                  width: 100%;
+                  border: 1px solid var(--neutral-grayish-blue);
+                  font-weight: var(--font-weight-bold);
+                }
+                #last {
+                  position: relative;
+                  top: -1.1em;
+                  left: 20px;
+                }
+              }
+              .email {
+                input {
+                  border-radius: 0.4em;
+                  padding: 1.2em;
+                  margin-bottom: 0.5em;
+                  width: 100%;
+                  border: 1px solid var(--neutral-grayish-blue);
+                  font-weight: var(--font-weight-bold);
+                }
+                #email {
+                  position: relative;
+                  top: -1.1em;
+                  left: 20px;
+                }
+              }
+              input {
+                border-radius: 0.4em;
+                padding: 1.2em;
+                margin-bottom: 0.5em;
+                width: 100%;
+                border: 1px solid var(--neutral-grayish-blue);
+                font-weight: var(--font-weight-bold);
+              }
+              #password {
+                position: relative;
+                top: -1.1em;
+                left: 20px;
+              }
+            }
+            .claim {
+              button {
+                border-radius: 0.4em;
+                padding: 1.2em;
+                margin-bottom: 1em;
+                width: 100%;
+                border: 1px solid var(--neutral-grayish-blue);
+                background-color: var(--primary-green);
+                color: white;
+                font-weight: var(--font-weight-bold);
+              }
+            }
+          }
+          .disclaimer {
+            font-size: 0.6em;
+            color: var(--neutral-grayish-blue);
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+
+            width: 100%;
+          }
+          .terms {
+            color: var(--primary-red);
+            font-family: "Poppins", sans-serif;
+            font-size: 0.6em;
+            text-align: center;
+            width: 100%;
+          }
+        }
+        .show-pass {
+          transform: translateY(-9rem) translateX(8em);
+
+          width: 25px;
+          height: 25px;
+        }
+
+        .show-pass2 {
+          transform: translateY(-11rem) translateX(10rem);
+
+          width: 25px;
+          height: 25px;
         }
       }
     }
