@@ -72,15 +72,23 @@ function validate() {
   if (passwordInput.value.trim() == "") {
     imageErorpass.classList.remove("d-none");
     msgPassword.innerHTML = "password cannot be empty";
+    icon.classList.remove("show-pass");
+    icon.classList.add("show-pass2");
   } else if (!/[A-Z]/.test(passwordInput.value)) {
     imageErorpass.classList.remove("d-none");
     msgPassword.innerHTML = "password must use eatlist 1 capital letter";
+    icon.classList.remove("show-pass");
+    icon.classList.add("show-pass2");
   } else if (passwordInput.value.length < 8) {
     imageEror.classList.remove("d-none");
     msgPassword.innerHTML = "password must be at least 8 characters";
+    icon.classList.remove("show-pass");
+    icon.classList.add("show-pass2");
   } else {
     imageErorpass.classList.add("d-none");
     msgPassword.innerHTML = "";
+    icon.classList.remove("show-pass2");
+    icon.classList.add("show-pass");
   }
 }
 /* tampilPass.addEventListener("click", function () {

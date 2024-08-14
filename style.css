@@ -33,6 +33,7 @@ body {
   background-color: var(--primary-red);
   max-width: 100vw;
   min-height: 100vh;
+  align-items: center;
 }
 body .container {
   display: flex;
@@ -41,6 +42,8 @@ body .container {
   justify-content: center;
   text-align: center;
   padding: 1em;
+  width: 100%;
+  height: 100%;
 }
 body .container .headder .headder-section {
   font-family: var(--font-family);
@@ -198,25 +201,26 @@ body .container .body-section .terms {
 @media screen and (min-width: 475px) {
   body {
     transition: all 0.5s;
+    padding: 2.3em 0 0 0;
   }
   body .container {
-    padding: 2em;
-    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
   }
   body .container .headder .headder-section {
     line-height: 1.4em;
     text-align: justify;
     font-weight: 900;
-    font-size: 2.5em;
+    font-size: 2.7em;
     width: 10em;
   }
   body .container .headder .headder-content {
-    width: 30em;
+    width: 35em;
     font-size: 1em;
     text-align: justify;
     padding: 1em;
+    margin-right: 5em;
   }
 }/*# sourceMappingURL=style.css.map */
